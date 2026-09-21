@@ -26,11 +26,11 @@ In Database/Scripts and Database/Stored-procedures we have all querys with a pro
 The goal of this is improve this query and get the information of each one.
 
 Database/Scripts 
-1.- MissingIndex.sql -> is a simple query but with a great problem
-2.- QueryWithMuchColumns -> is a query with a lot of columns
-3.- QueryWithJoins -> is a query with a lot of joins
-4.- Parameter-sniffing -> this in some moments return data
+1. MissingIndex.sql -> is a simple query but with a great problem
+2. QueryWithMuchColumns -> is a query with a lot of columns
+3. QueryWithJoins -> is a query with a lot of joins
+4. Parameter-sniffing -> this in some moments return data
 
 Database/Stored-procedures
-1.- SP-GetCustomerOrderHistory -> report of orders and customers
-2.- sp_ObtenerHistoricoOrdenes -> SP with pagination
+1. SP-GetCustomerOrderHistory -> report of orders and customers
+2. sp_ObtenerHistoricoOrdenes -> SP with pagination
