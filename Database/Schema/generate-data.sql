@@ -223,6 +223,15 @@ BEGIN
     PRINT CONCAT('    -> Carga Payments bloque ', @K, ' de 5 completada.');
 END;
 GO
+-- Insertar 1,000 clientes con Country = 'Guatemala'
+PRINT '8/8. insertando 1000 Registros en Customers con country Guatemala...';
+INSERT INTO dbo.Customers (Name, Email, Country)
+SELECT TOP (1000)
+    'Cliente GUA ' + CAST(ROW_NUMBER() OVER(ORDER BY (SELECT NULL)) AS VARCHAR(10)),
+    'gua' + CAST(ROW_NUMBER() OVER(ORDER BY (SELECT NULL)) AS VARCHAR(10)) + '@test.com',
+    'Guatemala'
+FROM sys.all_objects;
+GO
 
 -- Restablecer el Recovery Model de la base de datos a su estado original
 ALTER DATABASE northwindLab SET RECOVERY FULL;
